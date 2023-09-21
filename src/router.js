@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomePage from "./pages/HomePage.vue";
-import FavoritePage from "./pages/FavoritePage/FavoritePage.vue";
-import PhotoPage from "./pages/PhotoPage/PhotoPage.vue";
+import HomePage from "@/pages/HomePage.vue";
+import FavoritePage from "@/pages/FavoritePage/FavoritePage.vue";
+import PhotoPage from "@/pages/PhotoPage/PhotoPage.vue";
 const routes = [
   {
     path: "/",

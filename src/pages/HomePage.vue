@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Search from '../components/Search/Search.vue';
-import MainContent from '../components/MainContent/MainContent.vue';
+import Search from '@/components/Search/Search.vue';
+import MainContent from '@/components/MainContent/MainContent.vue';
 
 export default {
   name: 'homePage',
