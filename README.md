@@ -1,6 +1,6 @@
 # factory
 
-## Project setup
+## 1 ЭТАП
 
 ```
 После перехода по сслыке клонировать или скачать репозиторий
@@ -8,7 +8,7 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 2 ЭТАП
 
 ```
 Скачиваем все зависимости и вводим в TERMINAL
@@ -19,19 +19,3 @@ npm run serve
 https://factory-vert.vercel.app/
 Это тот же проект ʕ ᵔᴥᵔ ʔ
 ```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
