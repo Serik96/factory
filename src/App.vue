@@ -4,14 +4,14 @@
 </template>
 
 <script>
-import "./style/globals.css"
-import Header from '@/components/Header/Header.vue'
-
+import "./style/globals.css";
+import "./style/loader.css";
+import Header from "@/components/Header/Header.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
   },
-}
+};
 </script>

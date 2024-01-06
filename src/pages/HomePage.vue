@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import Search from '@/components/Search/Search.vue';
-import MainContent from '@/components/MainContent/MainContent.vue';
+import Search from "@/components/Search/Search.vue";
+import MainContent from "@/components/MainContent/MainContent.vue";
 
 export default {
-  name: 'homePage',
+  name: "homePage",
 
   components: {
     Search,
@@ -19,13 +19,16 @@ export default {
 
   data() {
     return {
-      filterText: '',
+      filterText: "",
     };
   },
 
   methods: {
     updateFilter(newFilterText) {
-      this.filterText = newFilterText;
+      const validText = newFilterText.trim();
+      if (validText !== "") {
+        this.filterText = validText;
+      }
     },
   },
 };
