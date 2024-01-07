@@ -1,6 +1,5 @@
 .mainContent {
   padding-top: 114px;
-  padding-bottom: 114px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -13,22 +12,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-
-  .error-container {
-    text-align: center;
-    .error-message {
-      font-size: 25px;
-    }
-    .error-gif {
-      margin-top: 10px;
-    }
+    margin-top: 20px;
   }
 
   .image-container {
-    width: calc(25% - 27px);
-    margin-bottom: 27px;
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 900px) {
+      width: calc(100%);
+    }
 
     &__inner {
       width: 100%;
@@ -41,22 +35,97 @@
       object-fit: cover;
       border-radius: 8px;
       cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .error-container {
+    text-align: center;
+    .error-message {
+      font-size: 25px;
+    }
+    .error-gif {
+      margin-top: 25px;
     }
   }
 }
 
-@media screen and (max-width: 900px) {
-  .mainContent {
-    padding-left: 21px;
-    padding-right: 21px;
+.buttons-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 84px;
+  margin-bottom: 60px;
 
-    .image-wrapper {
-      flex-direction: column;
-      align-items: center;
+  .refresh-button {
+    .refresh-icon1 {
+      background: none;
+      transition: transform 0.5s ease;
+    }
 
-      .image-container {
-        width: 100%;
+    &:hover {
+      .refresh-icon1 {
+        transform: rotate(90deg);
       }
+    }
+  }
+
+  .refresh-top {
+    position: fixed;
+    right: 120px;
+    bottom: 140px;
+    z-index: 999;
+    .refresh-icon2 {
+      background: none;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover {
+      .refresh-icon2 {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .button-top {
+    position: fixed;
+    right: 113px;
+    bottom: 71px;
+    z-index: 999;
+    .top-icon {
+      background: none;
+      transition: transform 0.3s ease, margin-top 0.3s ease;
+    }
+
+    &:hover {
+      .top-icon {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .button-top {
+      display: none;
+    }
+  }
+  .rotate {
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 }

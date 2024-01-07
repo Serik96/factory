@@ -4,6 +4,7 @@ const store = createStore({
   state() {
     return {
       favorites: [],
+      searchText: "",
     };
   },
   mutations: {
@@ -17,6 +18,20 @@ const store = createStore({
       if (index !== -1) {
         state.favorites.splice(index, 1);
       }
+    },
+    setSearchText(state, searchText) {
+      state.searchText = searchText;
+    },
+    clearSearchText(state) {
+      state.searchText = "";
+    },
+  },
+  actions: {
+    setSearchText({ commit }, searchText) {
+      commit("setSearchText", searchText);
+    },
+    clearText({ commit }) {
+      commit("clearSearchText");
     },
   },
   plugins: [

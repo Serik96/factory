@@ -26,9 +26,7 @@ export default {
   methods: {
     updateFilter(newFilterText) {
       const validText = newFilterText.trim();
-      if (validText !== "") {
-        this.filterText = validText;
-      }
+      this.filterText = validText;
     },
   },
 };

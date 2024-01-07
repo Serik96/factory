@@ -1,8 +1,8 @@
 <template>
   <div class="search">
     <div class="search-wrapper">
-      <input type="text" placeholder="Поиск" v-model="searchText" @input="updateFilter">
-      <img src="../../assets/icons/search-black.svg" alt="search">
+      <input type="text" placeholder="Поиск" v-model="searchText" />
+      <img src="../../assets/icons/search-black.svg" alt="search" />
     </div>
   </div>
 </template>
@@ -11,18 +11,17 @@
 import "./search.scss";
 
 export default {
-  name: 'searchComponent',
-
-  data() {
-    return {
-      searchText: '',
-    };
-  },
-
-  methods: {
-    updateFilter() {
-      this.$emit('update-filter', this.searchText);
+  name: "searchComponent",
+  computed: {
+    searchText: {
+      get() {
+        return this.$store.state.searchText;
+      },
+      set(value) {
+        this.$store.commit("setSearchText", value);
+        this.$emit("update-filter", value);
+      },
     },
   },
-}
+};
 </script>
